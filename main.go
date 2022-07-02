@@ -10,7 +10,7 @@ func main() {
 
 	// connect to mongodb
 	Mongo.MongoConfig()
-
+	//defer Mongo.MongoClient.Disconnect()
 	// create one bench document to increment counter in "mongo-increment" endpoint
 	Mongo.CreateMongoBench()
 

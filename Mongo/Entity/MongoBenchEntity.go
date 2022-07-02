@@ -1,6 +1,9 @@
 package Entity
 
+import "go.mongodb.org/mongo-driver/bson/primitive"
+
 type MongoBenchEntity struct {
-	Name    string `bson:"Name" json:"Name"`
-	Counter int    `bson:"Counter" json:"Counter"`
+	Id      primitive.ObjectID `bson:"_id,omitempty"`
+	Name    string             `bson:"Name"`
+	Counter int                `bson:"Counter"`
 }
